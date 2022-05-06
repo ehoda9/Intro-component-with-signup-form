@@ -2,7 +2,9 @@ const app = document.querySelector(".app");
 const left = document.querySelector(".left");
 const right = document.querySelector(".right");
 const btn = document.querySelector(".btn");
-
+app.style.animation = "ShakeApp";
+left.style.animation = "fadeUp";
+right.style.animation = "fadeUp";
 btn.addEventListener("click", ClaimFree);
 
 function ClaimFree() {

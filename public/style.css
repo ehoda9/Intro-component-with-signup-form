@@ -1,0 +1,167 @@
+:root {
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  --Blue: hsl(248, 32%, 49%);
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+}
+body {
+  background: url("./images/bg-intro-desktop.png") var(--Red) no-repeat fixed;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+}
+
+.app {
+  display: flex;
+  flex-direction: row;
+  gap: 7.5em;
+  padding: 3em 8em;
+  width: 100vw;
+  height: 100vh;
+}
+/*###############
+       Header
+  ###############*/
+.left {
+  align-self: center;
+}
+.left_title {
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: 5rem;
+}
+
+.left_paragraph {
+  color: var(--Grayish-Blue);
+}
+/*###############
+       Form
+  ############### */
+.right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  /* animation: Shake 0.3s alternate; */
+}
+.msg {
+  background-color: var(--Blue);
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  padding: 1em 1em;
+  border-radius: 0.5em;
+  box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.259);
+}
+.msg .t {
+  color: var(--Grayish-Blue);
+}
+form {
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.259);
+  background-color: white;
+  padding: 1.7em 1.7em;
+}
+.holder {
+  position: relative;
+}
+.holder.errors::after {
+  content: url("./images/icon-error.svg");
+  position: absolute;
+  right: 0;
+  top: 12px;
+  transform: translateX(-50%);
+  height: fit-content;
+  width: fit-content;
+}
+input {
+  width: 100%;
+  border: 1px solid var(--Grayish-Blue);
+  font-weight: 500;
+  padding: 1em 1.5em;
+  font-size: 1.5rem;
+  border-radius: 0.5em;
+}
+::placeholder {
+  color: var(--Grayish-Blue);
+}
+input:focus {
+  outline: none;
+  border-color: var(--Blue);
+}
+input:hover {
+  border-color: var(--Blue);
+}
+.error {
+  color: var(--Red);
+  text-align: right;
+  padding: 0.2em 1em;
+  font-weight: 400;
+}
+button {
+  background-color: var(--Green);
+  padding: 1em 1em;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.171);
+  border-radius: 0.4em;
+}
+button:hover {
+  cursor: pointer;
+  background-color: #43df9b;
+}
+p.footer {
+  color: var(--Grayish-Blue);
+  font-weight: 500;
+  font-size: 1.2rem;
+  text-align: center;
+}
+p.footer .terms {
+  color: var(--Red);
+  font-weight: 600;
+}
+p.footer .terms:hover {
+  cursor: pointer;
+}
+label,
+input,
+button {
+  display: block;
+}
+
+/* ##################### */
+/*       Animations      */
+/* ##################### */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    margin-top: 5px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+@keyframes ShakeApp {
+  from {
+    gap: 5em;
+  }
+  to {
+    gap: 8em;
+  }
+}
+@keyframes Shake {
+  from {
+    margin-right: -5px;
+  }
+  to {
+    margin-right: 0px;
+  }
+}

@@ -1,0 +1,35 @@
+@media (min-width: 768px) and (max-width: 1024px) {
+  .app {
+    gap: 2em;
+    padding: 4em 3em;
+  }
+  .left_title {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 770px) {
+  .app {
+    flex-direction: column;
+    gap: 2em;
+    padding: 4em 3em;
+  }
+  .left {
+    text-align: center;
+  }
+  .left_title {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 425px) {
+  .app {
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em 2em;
+  }
+  .left {
+    text-align: center;
+  }
+  .left_title {
+    font-size: 2rem;
+  }
+}

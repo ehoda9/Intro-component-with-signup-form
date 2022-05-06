@@ -2,9 +2,7 @@ const app = document.querySelector(".app");
 const left = document.querySelector(".left");
 const right = document.querySelector(".right");
 const btn = document.querySelector(".btn");
-app.style.animation = "ShakeApp";
-left.style.animation = "fadeUp";
-right.style.animation = "fadeUp";
+startApp();
 btn.addEventListener("click", ClaimFree);
 
 function ClaimFree() {
@@ -100,4 +98,15 @@ function checkPassword(password) {
       document.querySelector(".holder.in4").classList.remove("errors");
     }
   }
+}
+
+function startApp(){
+ 
+app.style.animationName = "ShakeApp";
+left.style.animationName = "fadeUp";
+right.style.animationName = "fadeUp";
+  app.style.animationDuration = "1s";
+left.style.animationDuration = "1.7s";
+right.style.animationDuration = "1.7s";
+  
 }

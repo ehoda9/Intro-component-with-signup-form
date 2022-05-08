@@ -22,12 +22,8 @@
 }
 @media (max-width: 425px) {
   .app {
-    flex-direction: column;
     gap: 1em;
     padding: 1em 2em;
-  }
-  .left {
-    text-align: center;
   }
   .left_title {
     font-size: 2rem;
